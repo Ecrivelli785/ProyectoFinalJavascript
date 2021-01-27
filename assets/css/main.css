@@ -3754,7 +3754,7 @@ background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 
 
 
 .image2:hover {
-background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(https://lh3.googleusercontent.com/proxy/aNEyiBSmdfzv_hLrH5Tm3eHOY1K_lj2oxM1SfcKr_Pw0yzWmWeEtfwQfwKmpKPJBhCHdXQpQhKMLIfoYDHcVLQ9T3bomUQft2KIg58_pL7hfReGptSPuscQ6KtCRoyI);
+background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(https://images.unsplash.com/photo-1542125387-c71274d94f0a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
     }
 
 
@@ -3815,3 +3815,22 @@ https://ipdjetskigraphics.com/wp-content/uploads/2016/06/color-swatches-2.jpg
     }
 
 
+
+
+.body-category {
+  display: inline-block;
+  background: #242943 url(https://cbwconline.com/IMG/Codepen/Unplugged.png) center/cover no-repeat;
+  height: 100vh;
+  margin: 0;
+  color: white;
+}
+
+.h1-category {
+  margin: .8em 3rem;
+  font: 4em Roboto;
+}
+.p-category {
+  display: inline-block;
+  margin: .2em 3rem;
+  font: 2em Roboto;
+}

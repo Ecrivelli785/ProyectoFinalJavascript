@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="script.js" href="script.js">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <title>Imprenta online</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-primary" style="background-color:rgb(36,41,67) ">
+        <span class="navbar-brand mb-0 h1 text-light">Imprenta online</span>
+    </nav>
+    <!-- END NAVBAR -->
+
+
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="d-none d-md-flex col-md-4 col-lg-6">
+                <img class="img-fluid mx-auto" alt="Responsive image"
+                    src="https://images.unsplash.com/photo-1610663072004-543de00fe1e4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80">
+            </div>
+            <div class="col-md-8 col-lg-6">
+                <div class="login d-flex align-items-center py-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="container mx-auto">
+                                <div>
+                                    <h1 class="container-title">Impresión de Flyers</h1>
+                                    <p class="line-subtitle-2">Escoge las características de tu producto, para calcular
+                                        tu presupuesto.</p>
+                                    <!--PROGRAMAR EL FORMULARIO-->
+                                    <div>
+                                        <form name="sumar">
+                                            <div class="divproductos-box mb-3 p-3">
+                                                <div>
+                                                    <p><strong for="container_0" class="container-title">
+                                                            CARACTERÍSTICAS
+                                                        </strong> </p>
+                                                    <!-- cantidad y cantidad por defecto -->
+                                                    <div class="row group-attribute-block">
+                                                        <div class="col-12 col-md-4 label-title">
+                                                            <div> Cantidad:</div>
+                                                        </div>
+                                                        <div class="col-11 col-md-7 has-error d-flex">
+                                                            <input type="text" name="cantidad" placeholder="Cantidad"
+                                                                onKeyUp="operacion()">
+
+                                                        </div>
+                                                        <!--Inicio del Modal -->
+                                                        <a class="fa fa-info-circle" href="#primary"
+                                                            data-toggle="modal"></a>
+                                                        <div class="modal fade" id="primary" tabindex="-1" role="dialog"
+                                                            aria-labelledby="myModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header modal-header-primary">
+                                                                        <h1>Cantidad</h1>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        Indica la cantidad de ejemplares que deseas. A
+                                                                        mayor cantidad el costo unitario es menor.
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button"
+                                                                            class="btn btn-default pull-left"
+                                                                            data-dismiss="modal">Cerrar</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Fin del Modal -->
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="divproductos-box mb-3 p-3">
+                                                <div class="divproductos-box">
+                                                    <p class="container-title"><strong>Características
+                                                            generales</strong></p>
+                                                    <div class="row group-attribute-block ">
+                                                        <div class="col-12 col-md-4 ">
+                                                            <div> Tintas impresión: </div>
+                                                        </div>
+                                                        <div class="col-11 col-md-7">
+                                                            <select name="tintas" onchange="operacion()">
+                                                                <option value="500">4+0 Color a una cara</option>
+                                                                <option value="1000" selected="selected">4+4 Color a dos
+                                                                    caras </option>
+                                                                <option value="100">1+0 Negro a una cara</option>
+                                                                <option value="200">1+1 Negro a dos caras</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <!--Inicio del Modal -->
+                                                        <a class="fa fa-info-circle" href="#second"
+                                                            data-toggle="modal"></a>
+                                                        <div class="modal fade" id="second" tabindex="-1" role="dialog"
+                                                            aria-labelledby="myModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header modal-header-primary">
+                                                                        <h1>Tintas</h1>
+                                                                    </div>
+                                                                    <div class="modal-body">
+
+                                                                        A la hora de elegir los colores de su pedido,
+                                                                        verá que le aparecen diferentes opciones
+                                                                        numéricas según el proyecto. A continuación le
+                                                                        damos una relación de estas y su significado:
+                                                                        <br>
+                                                                        <ul>
+                                                                            <li>4+4 Impresos a todo color ambas caras
+                                                                                (CMYK / CMYK).</li>
+                                                                            <li>4+0 Impresos a todo color una cara y el
+                                                                                reverso sin impresión (CMYK / – ).</li>
+                                                                            <li>1+0 Impreso blanco y negro una cara y el
+                                                                                anverso sin impresión. (K / – )</li>
+                                                                            <li>1+1 Impresos a blanco y negro ambas
+                                                                                caras (K / K)</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button"
+                                                                            class="btn btn-default pull-left"
+                                                                            data-dismiss="modal">Cerrar</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Fin del Modal -->
+
+                                                    </div>
+                                                </div>
+                                                <div class="row group-attribute-block" id="group_20">
+                                                    <div class="col-12 col-md-4"><label> Tamaño: </label></div>
+                                                    <div class="col-11 col-md-7">
+                                                        <select name="tamaño" onchange="operacion()">
+                                                            <!-- <option >A definir</option> -->
+                                                            <option value="0.25">105 x 148 mm (A6)</option>
+                                                            <option value="0.5">148 x 210 mm (A5)</option>
+                                                            <option value="1">210 x 297 mm (A4)</option>
+                                                            <option value="0.20">100 x 100 mm</option>
+                                                            <option value="0.35">100 x 150 mm</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <!--Inicio del Modal -->
+                                                    <a class="fa fa-info-circle" href="#third" data-toggle="modal"></a>
+                                                    <div class="modal fade" id="third" tabindex="-1" role="dialog"
+                                                        aria-labelledby="myModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header modal-header-primary">
+                                                                    <h1>Tamaño</h1>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    Elegir el tamaño del flyer. Medidas en milímetros.
+                                                                    Si no encuentras el tamaño que buscas elige el
+                                                                    inmediatamente superior y lo cortaremos a la medida
+                                                                    que nos indiques sin coste adicional.
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button"
+                                                                        class="btn btn-default pull-left"
+                                                                        data-dismiss="modal">Cerrar</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Fin del Modal -->
+
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="divproductos-box mb-3 p-2">
+                                        <p class="container-title"><strong>Papel</strong></p>
+                                        <div class="row group-attribute-block" id="group_10">
+                                            <div class="col-12 col-md-4"><label> Categoría: </label></div>
+                                            <div class="col-11 col-md-7">
+                                                <select name="papel" onchange="operacion()">
+                                                    <option value="10">Ilustración</option>
+                                                    <option value="3">Obra</option>
+                                                </select>
+                                            </div>
+
+                                            <!--Inicio del Modal -->
+                                            <a class="fa fa-info-circle" href="#fourth" data-toggle="modal"></a>
+                                            <div class="modal fade" id="fourth" tabindex="-1" role="dialog"
+                                                aria-labelledby="myModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header modal-header-primary">
+                                                            <h1>Categoria</h1>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <ul>
+                                                                <li>Papel ilustracion: Es un papel satinado, grueso y
+                                                                    con cuerpo</li>
+                                                                <li>Papel obra: Es el tipo de papel más barato y, por lo
+                                                                    tanto, el de calidad más baja. Tiene poca duración y
+                                                                    es opaco, por lo que los colores pierden definición.
+                                                                    Es ideal para imprimir volantes en grandes
+                                                                    cantidades.</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default pull-left"
+                                                                data-dismiss="modal">Cerrar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin del Modal -->
+
+                                            <div class="col-12 col-md-4"><label> Gramaje: </label></div>
+                                            <div class="col-11 col-md-7">
+                                                <select name="familia" onchange="operacion()">
+                                                    <option value="1">Mate</option>
+                                                    <option value="2">Brillante</option>
+                                                </select>
+                                            </div>
+
+                                            <!--Inicio del Modal -->
+                                            <a class="fa fa-info-circle" href="#fifth" data-toggle="modal"></a>
+                                            <div class="modal fade" id="fifth" tabindex="-1" role="dialog"
+                                                aria-labelledby="myModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header modal-header-primary">
+                                                            <h1>Familia</h1>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            Mate o brillante. Considerar que no existen papeles obra
+                                                            brillantes.
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default pull-left"
+                                                                data-dismiss="modal">Cerrar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin del Modal -->
+
+                                            <div class="col-12 col-md-4"><label> Gramaje: </label></div>
+                                            <div class="col-11 col-md-7">
+                                                <select name="gramaje" onchange="operacion()">
+                                                    <option value="1"> 115 gr.</option>
+                                                    <option value="2">150 gr.</option>
+                                                    <option value="3">170 gr.</option>
+                                                    <option value="4">250 gr.</option>
+                                                    <option value="5">300 gr.</option>
+                                                    <option value="6">350 gr.</option>
+                                                </select>
+                                            </div>
+
+                                            <!--Inicio del Modal -->
+                                            <a class="fa fa-info-circle" href="#sixth" data-toggle="modal"></a>
+                                            <div class="modal fade" id="sixth" tabindex="-1" role="dialog"
+                                                aria-labelledby="myModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header modal-header-primary">
+                                                            <h1>Gramaje</h1>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            El gramaje es el peso de la hoja de papel. A mayor gramaje
+                                                            mayor opacidad y rigidez.
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default pull-left"
+                                                                data-dismiss="modal">Cerrar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fin del Modal -->
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="divproductos-box mb-3 p-3">
+                                    <p class="container-title"><strong>Acabados</strong> </p>
+                                    <div class="row group-attribute-block" id="group_14">
+                                        <div class="col-12 col-md-4"><label> Empaquetado: </label></div>
+                                        <div class="col-11 col-md-7">
+                                            <select name="empaquetado" onchange="operacion()">
+                                                <option value="100" selected="selected">No</option>
+                                                <option value="300">Si - Paquetes 100 unid.</option>
+                                                <option value="150">Si - Paquetes 200 unid.</option>
+                                                <option value="75">Si - Paquetes 500 unid.</option>
+                                            </select>
+                                        </div>
+
+                                        <!--Inicio del Modal -->
+                                        <a class="fa fa-info-circle" href="#primary" data-toggle="modal"></a>
+                                        <div class="modal fade" id="primary" tabindex="-1" role="dialog"
+                                            aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header modal-header-primary">
+                                                        <h1>Empaque</h1>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Consiste en empaquetar o envolver el producto en una fina lámina
+                                                        de plástico que se retrae mediante calor adaptándola a la forma
+                                                        del paquete. Ayuda a proteger tus impresos de la humedad o el
+                                                        polvo alargando sus posibilidades de almacenaje.
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default pull-left"
+                                                            data-dismiss="modal">Cerrar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Fin del Modal -->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                  <div>
+                    <label>TOTAL</label>
+                    <input type="text" id="total" name="total">
+                  </div>
+                  <div>
+                    <label>TOTAL MAS IMPUESTOS (21%)</label>
+                    <input type="text" id="totalImpuestos" name="totalImpuestos">
+                  </div>
+            </div>
+            </form>
+
+
+        </div>
+    </div>
+    </div>
+    </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>
+
+<script>
+
+    let detallesProducto = ["cantidad", "tamaño", "tintas", "papel", "familia", "gramaje", "empaquetado", "total"]
+    let caracteristicasProducto = [];
+
+    function operacion() {
+        caja = document.forms["sumar"].elements;
+        var cantidad1 = Number(caja["cantidad"].value);
+        var tamaño1 = Number(caja["tamaño"].value);
+        var tintas1 = Number(caja["tintas"].value);
+        var papel1 = Number(caja["papel"].value);
+        var familia1 = Number(caja["familia"].value);
+        var gramaje1 = Number(caja["gramaje"].value);
+        var empaquetado1 = Number(caja["empaquetado"].value);
+        var total = (cantidad1 * (tamaño1 * (papel1 * familia1 * gramaje1))) + tintas1 + empaquetado1;
+        var totalImpuestos = total * 1.21;
+        document.getElementById('total').value = total;
+        document.getElementById('totalImpuestos').value = totalImpuestos;
+
+        caracteristicasProducto.push(cantidad1, tamaño1, tintas1, papel1, familia1, empaquetado1, total)
+
+        var show = (detallesProducto[0].concat(caracteristicasProducto[0]));
+    };
+
+</script>
