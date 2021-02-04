@@ -1,7 +1,7 @@
 
 
    $(function () {
-           $('#WAButton').floatingWhatsApp({
+           $('#wppPopup').floatingWhatsApp({
                phone: '+543876150991',
                headerTitle: 'Chatea por WhatsApp!'
                popupMessage: 'Hola! En que podemos ayudarte?',
