@@ -49,13 +49,14 @@
                                                             CARACTERÍSTICAS
                                                         </strong> </p>
                                                     <!-- cantidad y cantidad por defecto -->
+                                                    <input type="hidden" value="folletos" class="infoPresupuesto">
                                                     <div class="row group-attribute-block">
                                                         <div class="col-12 col-md-4 label-title">
                                                             <div> Cantidad:</div>
                                                         </div>
                                                         <div class="col-11 col-md-7 has-error d-flex">
                                                             <input type="text" name="cantidad" placeholder="Cantidad"
-                                                                onKeyUp="operacion()">
+                                                                onKeyUp="operacion()" class="infoPresupuesto">
 
                                                         </div>
                                                         <!--Inicio del Modal -->
@@ -95,7 +96,7 @@
                                                             <div> Tintas impresión: </div>
                                                         </div>
                                                         <div class="col-11 col-md-7">
-                                                            <select name="tintas" onchange="operacion()">
+                                                            <select name="tintas" onchange="operacion()" class="infoPresupuesto">
                                                                 <option value="500">4+0 Color a una cara</option>
                                                                 <option value="1000" selected="selected">4+4 Color a dos
                                                                     caras </option>
@@ -147,7 +148,7 @@
                                                 <div class="row group-attribute-block" id="group_20">
                                                     <div class="col-12 col-md-4"><label> Tamaño: </label></div>
                                                     <div class="col-11 col-md-7">
-                                                        <select name="tamaño" onchange="operacion()">
+                                                        <select name="tamaño" onchange="operacion()" class="infoPresupuesto" >
                                                             <!-- <option >A definir</option> -->
                                                             <option value="0.25">105 x 148 mm (A6)</option>
                                                             <option value="0.5">148 x 210 mm (A5)</option>
@@ -190,7 +191,7 @@
                                         <div class="row group-attribute-block" id="group_10">
                                             <div class="col-12 col-md-4"><label> Categoría: </label></div>
                                             <div class="col-11 col-md-7">
-                                                <select name="papel" onchange="operacion()">
+                                                <select name="papel" onchange="operacion()" class="infoPresupuesto">
                                                     <option value="10">Ilustración</option>
                                                     <option value="3">Obra</option>
                                                 </select>
@@ -225,9 +226,9 @@
                                             </div>
                                             <!-- Fin del Modal -->
 
-                                            <div class="col-12 col-md-4"><label> Gramaje: </label></div>
+                                            <div class="col-12 col-md-4"><label> Tipo papel: </label></div>
                                             <div class="col-11 col-md-7">
-                                                <select name="familia" onchange="operacion()">
+                                                <select name="familia" onchange="operacion()" class="infoPresupuesto">
                                                     <option value="1">Mate</option>
                                                     <option value="2">Brillante</option>
                                                 </select>
@@ -257,7 +258,7 @@
 
                                             <div class="col-12 col-md-4"><label> Gramaje: </label></div>
                                             <div class="col-11 col-md-7">
-                                                <select name="gramaje" onchange="operacion()">
+                                                <select name="gramaje" onchange="operacion()" class="infoPresupuesto">
                                                     <option value="1"> 115 gr.</option>
                                                     <option value="2">150 gr.</option>
                                                     <option value="3">170 gr.</option>
@@ -297,7 +298,7 @@
                                     <div class="row group-attribute-block" id="group_14">
                                         <div class="col-12 col-md-4"><label> Empaquetado: </label></div>
                                         <div class="col-11 col-md-7">
-                                            <select name="empaquetado" onchange="operacion()">
+                                            <select name="empaquetado" onchange="operacion()" class="infoPresupuesto">
                                                 <option value="100" selected="selected">No</option>
                                                 <option value="300">Si - Paquetes 100 unid.</option>
                                                 <option value="150">Si - Paquetes 200 unid.</option>
@@ -338,14 +339,16 @@
 
                 </div>
                   <div>
-                    <label>TOTAL</label>
-                    <input type="text" id="total" name="total">
+
+                    <label>TOTAL sin IVA</label>
+                    <input type="text" id="total" name="total" class="infoPresupuesto">
 
                   </div>
                   <div>
-                    <label>TOTAL MAS IMPUESTOS (21%)</label>
-                    <input type="text" id="totalImpuestos" name="totalImpuestos">
+                    <label>Precio final (21%)</label>
+                    <input type="text" id="totalImpuestos" name="totalImpuestos" class="infoPresupuesto">
                   </div>
+                  <input class="btn btn-success m-3 mx-auto" type="button" value="Agregar al carrito" onclick="AgregarCarrito()">
             </div>
             </form>
 

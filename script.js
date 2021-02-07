@@ -1,18 +1,5 @@
 
 
-   $(function () {
-           $('#WppPopup').floatingWhatsApp({
-               phone: '+543876150991',
-               headerTitle: 'Chatea por WhatsApp!',
-               popupMessage: 'Hola! En que podemos ayudarte?',
-               showPopup: true,
-               buttonImage: '<img src= ../images/whatsapp.svg/>',
-               position: "right"
-
-           });
-       });
-
-
 
     let detallesProducto = ["cantidad", "tamaño", "tintas", "papel", "familia", "gramaje", "empaquetado", "total"]
     let caracteristicasProducto = [];
@@ -35,3 +22,15 @@
 
         var show = (detallesProducto[0].concat(caracteristicasProducto[0]));
     };
+
+
+
+
+var AgregarCarrito = function(){
+        let datosTrabajo = document.getElementsByClassName("infoPresupuesto"),
+            carrito = [];
+        for (var i = 0; i < datosTrabajo.length; i++) {
+            carrito[i] = datosTrabajo[i].value;
+            console.log (datosTrabajo[i].value);
+            }
+        }
