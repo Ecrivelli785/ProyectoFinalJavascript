@@ -56,7 +56,7 @@
                                                         </div>
                                                         <div class="col-11 col-md-7 has-error d-flex">
                                                             <input type="text" name="cantidad" placeholder="Cantidad"
-                                                                onKeyUp="operacion()" class="infoPresupuesto">
+                                                                onKeyUp="operacion()" id="cantidad" class="infoPresupuesto">
 
                                                         </div>
                                                         <!--Inicio del Modal -->
@@ -96,7 +96,7 @@
                                                             <div> Tintas impresión: </div>
                                                         </div>
                                                         <div class="col-11 col-md-7">
-                                                            <select name="tintas" onchange="operacion()" class="infoPresupuesto">
+                                                            <select name="tintas" onchange="operacion()" class="infoPresupuesto" >
                                                                 <option value="500">4+0 Color a una cara</option>
                                                                 <option value="1000" selected="selected">4+4 Color a dos
                                                                     caras </option>
@@ -191,7 +191,7 @@
                                         <div class="row group-attribute-block" id="group_10">
                                             <div class="col-12 col-md-4"><label> Categoría: </label></div>
                                             <div class="col-11 col-md-7">
-                                                <select name="papel" onchange="operacion()" class="infoPresupuesto">
+                                                <select name="categoria" onchange="operacion()" class="infoPresupuesto">
                                                     <option value="10">Ilustración</option>
                                                     <option value="3">Obra</option>
                                                 </select>
@@ -329,7 +329,6 @@
                                             </div>
                                         </div>
                                         <!-- Fin del Modal -->
-
                                     </div>
                                 </div>
                             </div>
@@ -377,3 +376,4 @@
 </body>
 
 </html>
+
