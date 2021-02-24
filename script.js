@@ -40,9 +40,14 @@
         var guardado = localStorage.getItem('datos');
         console.log('objetoObtenido1: ', JSON.parse(guardado));
     };
-    $('btn-agregarcarrito').click(function(){
+    function AgregarCarrito(){
         cotizacion.estado = "1";
-    });
+    };
+
+
+      function SacarCarrito(){
+        cotizacion.estado = "0";
+    };
 //    function agregarcarrito() {
   //      if (carrito.length )
     //    cotizacion.id = carrito.length+1;
