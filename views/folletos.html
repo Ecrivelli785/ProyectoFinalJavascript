@@ -11,6 +11,8 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+
     <title>Imprenta online</title>
     <script type="text/javascript" src="../script.js"></script>
 
@@ -21,6 +23,10 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-primary" style="background-color:rgb(36,41,67) ">
         <a  href="index.html" class="navbar-brand mb-0 h1 text-light">Imprenta online</a>
+                      <a href="carrito.html" class="nav-link navbar-link-2 waves-effect">
+                <span class="badge badge-pill red">1</span>
+                <i class="fas fa-shopping-cart pl-0"></i>
+              </a>
     </nav>
     <!-- END NAVBAR -->
 
@@ -347,7 +353,7 @@
                     <label>Precio final (21%)</label>
                     <input type="text" id="totalImpuestos" name="totalImpuestos" class="infoPresupuesto">
                   </div>
-                  <input class="btn btn-success m-3 mx-auto" type="button" value="Agregar al carrito" onclick="AgregarCarrito()">
+                  <a href="carrito.html" class="btn btn-success m-3 mx-auto" type="button"onclick="AgregarCarrito()">Agregar al carrito </a>
                   <input class="btn btn-danger m-3 mx-auto" type="button" value="Agregar al carrito" onclick="SacarCarrito()">
 
             </div>

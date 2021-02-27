@@ -35,11 +35,14 @@
 
 
         // Guardo el objeto como un string
+
         localStorage.setItem('datos', JSON.stringify(cotizacion));
         // Obtengo el string previamente salvado y luego
         var guardado = localStorage.getItem('datos');
         console.log('objetoObtenido1: ', JSON.parse(guardado));
     };
+
+
     function AgregarCarrito(){
         cotizacion.estado = "1";
     };
