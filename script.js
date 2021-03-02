@@ -62,3 +62,7 @@ function VerCarrito(){
 }
 
 
+  function ShowLocalStorage() {
+  var x = localStorage.getItem("presupuesto");
+  document.getElementById("demo").innerHTML = x;
+}
