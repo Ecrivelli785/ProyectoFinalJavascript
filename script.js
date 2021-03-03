@@ -36,9 +36,9 @@
         document.getElementById('total').value = total;
         document.getElementById('totalImpuestos').value = totalImpuestos;
         // Obtengo el string previamente salvado y luego
+        document.getElementById('totalCarrito').value = totalCarrito;
         localStorage.getItem('datos');
     };
-
 
 function AgregarCarrito(){
         cotizacion.estado=1;
@@ -66,3 +66,5 @@ function VerCarrito(){
   var x = localStorage.getItem("presupuesto");
   document.getElementById("demo").innerHTML = x;
 }
+
+

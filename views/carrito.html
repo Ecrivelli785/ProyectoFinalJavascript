@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
 
     <title>Carrito</title>
     <script type="text/javascript" src="../script.js"></script>
 
-  </head>
+</head>
+
 <body>
 
 
@@ -20,95 +23,79 @@
 
     <!-- NAVBAR -->
     <nav class="navbar navbar-primary" style="background-color:rgb(36,41,67) ">
-        <a  href="index.html" class="navbar-brand mb-0 h1 text-light">Imprenta online</a>
-                      <a href="carrito.html" class="nav-link navbar-link-2 waves-effect">
-                <span class="badge badge-pill red">1</span>
-                <i class="fas fa-shopping-cart pl-0"></i>
-              </a>
+        <a href="index.html" class="navbar-brand mb-0 h1 text-light">Imprenta online</a>
+        <a href="carrito.html" class="nav-link navbar-link-2 waves-effect">
+            <span class="badge badge-pill red">1</span>
+            <i class="fas fa-shopping-cart pl-0"></i>
+        </a>
     </nav>
     <!-- END NAVBAR -->
 
-<button  class="btn btn-danger m-3 align-items-center" onclick="ShowLocalStorage()">Cargar productos</button>
+    <button class="btn btn-danger m-3 align-items-center" onclick="ShowLocalStorage()">Cargar productos</button>
 
     <div class="container">
-  <!-- Page Heading -->
-  <div class="row">
-    <div class="col-12">
-      <h1 class="page-header my-">Carrito de compras</h1>
-    </div>
-  </div>
-  <!-- /.row -->
-
-
-
-  <!-- Cart Table -->
-  <div class="row">
-    <div class="col-lg-8 mb-4">
-      <form id="cart-update-form" method="post" action="/cart/update">
-        <div class="table-responsive">
-          <table class="table1" id="table">
-            <thead>
-              <tr>
-                <th>Producto</th>
-                <th class="mob-hide"></th>
-                <th class="mob-hide">Precio unitario</th>
-                <th class="table-qty">Cantidad</th>
-                <th>SubTotal</th>
-                <th></th>
-              </tr>
-            </thead>
-
-            <tbody><tr>
-              <td>
-
-
-              <h3 id="demo"></h3>
-
-              </td>
-              <td class="text-center mob-hide">
-                <a href="" class="trsn" title="">
-
-                  <img src="" alt="" title="">
-
-                </a>
-              </td>
-              <td class="mob-hide">
-
-                <span class="order-product-price"></span>
-
-              </td>
-
-              <td>
-                <span class="order-product-subtotal"></span>
-              </td>
-            </tr>
-
-          </tbody>
-        </table>
-        </div>
-      <input type="hidden"></form>
-      <hr class="my-3">
-      <div class="row">
-
-        <div class="cart-discount text-center col-md-6 offset-md-3">
-          <div class="card">
-            <div class="card-body">
-              <h4>¿Tienes un cupón de descuento?</h4>
-              <form action="/cart/coupon" accept-charset="UTF-8" id="coupon_form" autocomplete="off" method="post">  <div class="form-group"><input id="coupon_code" name="code" type="text" class="text form-control"></div>
-  <input id="set_coupon_code_button" type="submit" value="¡Si lo tengo!" class="btn btn-outline-secondary btn-block">
-
-<input type="hidden"></form>
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-12">
+                <h1 class="page-header my-">Carrito de compras</h1>
             </div>
-          </div>
         </div>
-
-      </div>
-    </div>
+        <!-- /.row -->
 
 
 
-        <div class="col-12 cart-totals">
-          <table class="table table-striped">
+        <!-- Cart Table -->
+        <div class="row">
+            <div class="col-lg-8 mb-4">
+                <form id="cart-update-form" method="post" action="/cart/update">
+                    <div class="">
+                        <table class="table1" id="table">
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>X</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p id="demo"></p>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <input type="hidden">
+                </form>
+                <hr class="my-3">
+                <div class="row">
+
+                    <div class="cart-discount text-center col-md-6 offset-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>¿Tienes un cupón de descuento?</h4>
+                                <form action="/cart/coupon" accept-charset="UTF-8" id="coupon_form" autocomplete="off"
+                                    method="post">
+                                    <div class="form-group"><input id="coupon_code" name="code" type="text"
+                                            class="text form-control"></div>
+                                    <input id="set_coupon_code_button" type="submit" value="¡Si lo tengo!"
+                                        class="btn btn-outline-secondary btn-block">
+
+                                    <input type="hidden">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="col-12 cart-totals">
+                <table class="table table-striped">
 
 
 
@@ -118,27 +105,32 @@
 
 
 
-            <tbody><tr class="totals key">
-              <td colspan="1" class="text-left"><strong>Total</strong></td>
-              <td colspan="1" class="text-right"><strong>$20.000</strong></td>
-            </tr>
+                    <tbody>
+                        <tr class="totals key">
+                            <td colspan="1" class="text-left"><strong>Total</strong></td>
+                            <td colspan="1" class="text-right"><strong>$20.000</strong></td>
+                        </tr>
 
-          </tbody></table>
+                    </tbody>
+                </table>
 
-          <div class="text-center cart-actions">
-            <a href="checkout.html" class="btn btn-primary btn-block" title="Proceed to Checkout">Finalizar compra</a>
+                <div class="text-center cart-actions">
+                    <a href="checkout.html" class="btn btn-primary btn-block" title="Proceed to Checkout">Finalizar
+                        compra</a>
 
-            <a href="javascript:history.back()" class="btn btn-link btn-block" title="← Continue Shopping">← Continuar comprando</a>
-          </div>
+                    <a href="javascript:history.back()" class="btn btn-link btn-block" title="← Continue Shopping">←
+                        Continuar comprando</a>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
 
     <!-- /.container -->
 
     <!-- Css -->
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 
@@ -148,8 +140,15 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
